@@ -7,6 +7,8 @@
   },
   "dependencies": {
     "@vee-validate/rules": "^4.1.20",
+    "@vuelidate/core": "^2.0.0-alpha.19",
+    "@vuelidate/validators": "^2.0.0-alpha.17",
     "axios": "^0.21.1",
     "date-fns": "^2.22.1",
     "rxjs": "^7.1.0",

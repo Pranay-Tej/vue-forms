@@ -19,6 +19,13 @@ import ApiPopulate from "../views/api-populate/ApiPopulate.vue";
 import List from "../views/api-populate/List.vue";
 import Form from "../views/api-populate/Form.vue";
 
+import Vuelidate from "../views/vuelidate/Vuelidate.vue";
+import VuelidateHome from "../views/vuelidate/VuelidateHome.vue";
+import Basic from "../views/vuelidate/Basic.vue";
+import CustomValidation from "../views/vuelidate/CustomValidation.vue";
+import CrossFieldValidation from "../views/vuelidate/CrossFieldValidation.vue";
+import DynamicValidation from "../views/vuelidate/DynamicValidation.vue";
+
 const routes = [
   {
     path: "/",
@@ -83,6 +90,32 @@ const routes = [
       {
         path: ":id",
         component: Form,
+      },
+    ],
+  },
+  {
+    path: "/vuelidate",
+    component: Vuelidate,
+    children: [
+      {
+        path: "",
+        component: VuelidateHome,
+      },
+      {
+        path: "basic",
+        component: Basic,
+      },
+      {
+        path: "custom",
+        component: CustomValidation,
+      },
+      {
+        path: "cross-field",
+        component: CrossFieldValidation,
+      },
+      {
+        path: "dynamic",
+        component: DynamicValidation,
       },
     ],
   },
