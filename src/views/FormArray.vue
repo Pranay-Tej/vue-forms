@@ -16,23 +16,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const emails = ref(["a@b.com", "c@d.com", "e@f.com"]);
+const emails = ref(["a@b.com", "c@d.com", "e@f.com"]);
 
-    function print() {
-      console.log({ emails: emails.value });
-    }
-
-    return {
-      emails,
-      print,
-    };
-  },
-};
+function print() {
+  console.log({ emails: emails.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

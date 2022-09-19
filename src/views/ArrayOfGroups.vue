@@ -26,33 +26,21 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const names = ref([]);
+const names = ref([]);
 
-    function addName() {
-      names.value = names.value.concat([{ firstName: "", lastName: "" }]);
-    }
+function addName() {
+  names.value = names.value.concat([{ firstName: "", lastName: "" }]);
+}
 
-    function removeName(i) {
-      names.value = names.value.filter((val, index) => i !== index);
-    }
+function removeName(i) {
+  names.value = names.value.filter((val, index) => i !== index);
+}
 
-    function print() {
-      console.log({ names: names.value });
-    }
-
-    return {
-      names,
-      addName,
-      removeName,
-      print,
-    };
-  },
-};
+function print() {
+  console.log({ names: names.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

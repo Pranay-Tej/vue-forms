@@ -14,24 +14,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const car = ref();
-    const carList = ref(["Lamborghini", "BMW", "Benz", "Audi"]);
 
-    function print() {
-      console.log({ car: car.value });
-    }
-    return {
-      car,
-      carList,
-      print,
-    };
-  },
-};
+const car = ref();
+const carList = ref(["Lamborghini", "BMW", "Benz", "Audi"]);
+
+function print() {
+  console.log({ car: car.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

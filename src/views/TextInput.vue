@@ -9,22 +9,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const email = ref("");
 
-    function print() {
-      console.log({ email: email.value });
-    }
-    return {
-      email,
-      print,
-    };
-  },
-};
+const email = ref("");
+
+function print() {
+  console.log({ email: email.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

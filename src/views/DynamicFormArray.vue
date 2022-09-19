@@ -18,33 +18,21 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const emails = ref([]);
+const emails = ref([]);
 
-    function addEmailField() {
-      emails.value = emails.value.concat([""]);
-    }
+function addEmailField() {
+  emails.value = emails.value.concat([""]);
+}
 
-    function removeEmailField(i) {
-      emails.value = emails.value.filter((val, index) => i !== index);
-    }
+function removeEmailField(i) {
+  emails.value = emails.value.filter((val, index) => i !== index);
+}
 
-    function print() {
-      console.log({ emails: emails.value });
-    }
-
-    return {
-      emails,
-      addEmailField,
-      removeEmailField,
-      print,
-    };
-  },
-};
+function print() {
+  console.log({ emails: emails.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

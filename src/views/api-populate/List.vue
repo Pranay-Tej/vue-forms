@@ -15,57 +15,41 @@
   </div>
 </template>
 
-<script>
-import useEffect from "../../composables/useAxios.js";
+<script setup>
+import useAxios from "../../composables/useAxios.js";
 import { useRouter } from "vue-router";
-export default {
-  setup() {
-    const {
-      data,
-      error,
-      isLoading,
-      execute: fetchList,
-    } = useEffect(`https://buttery-purple-calcium.glitch.me/it-requests`);
-    fetchList();
+const {
+  data,
+  error,
+  isLoading,
+  execute: fetchList,
+} = useAxios(`https://buttery-purple-calcium.glitch.me/it-requests`);
+fetchList();
 
-    const router = useRouter();
+const router = useRouter();
 
-    // async function fetchItRequests(){
-    //   await execute()
-    // }
+// async function fetchItRequests(){
+//   await execute()
+// }
 
-    // fetchItRequests()
+// fetchItRequests()
 
-    function viewItRequest(id) {
-      router.push(`/api-populate/${id}`);
-    }
+function viewItRequest(id) {
+  router.push(`/api-populate/${id}`);
+}
 
-    async function deleteItRequest(id) {
-      const {
-        data,
-        error,
-        isLoading,
-        execute: deleteIt,
-      } = useEffect(
-        `https://buttery-purple-calcium.glitch.me/it-requests/${id}`,
-        {
-          method: "DELETE",
-        }
-      );
-      await deleteIt();
-      fetchList();
-    }
-
-    return {
-      data,
-      error,
-      isLoading,
-      viewItRequest,
-      deleteItRequest,
-    };
-  },
-};
+async function deleteItRequest(id) {
+  const {
+    data,
+    error,
+    isLoading,
+    execute: deleteIt,
+  } = useAxios(`https://buttery-purple-calcium.glitch.me/it-requests/${id}`, {
+    method: "DELETE",
+  });
+  await deleteIt();
+  fetchList();
+}
 </script>
 
-<style>
-</style>
+<style></style>

@@ -9,22 +9,14 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const amount = ref();
 
-    function print() {
-      console.log({ amount: amount.value });
-    }
-    return {
-      amount,
-      print,
-    };
-  },
-};
+const amount = ref();
+
+function print() {
+  console.log({ amount: amount.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>
