@@ -3,37 +3,35 @@
     <form @submit.prevent="print">
       <label for="cars">Choose a car:</label>
 
-      <select name="cars" id="cars" multiple="true" v-model="selectedCars">
+      <select
+        name="cars"
+        id="cars"
+        multiple="true"
+        v-model="state.selectedCars"
+      >
         <option v-for="car in carList" :value="car" :key="car">
           {{ car }}
         </option>
       </select>
       <button type="submit">Print</button>
-      {{ selectedCars }}
+
+      <p v-for="car in state.selectedCars">
+        {{ car }}
+      </p>
     </form>
   </div>
 </template>
 
-<script>
-import { reactive, ref, toRefs } from "vue";
-export default {
-  setup() {
-    const state = reactive({
-      selectedCars: [],
-    });
-    const carList = ref(["Lamborghini", "BMW", "Benz", "Audi"]);
+<script setup>
+import { reactive, ref } from "vue";
+const state = reactive({
+  selectedCars: [],
+});
+const carList = ref(["Lamborghini", "BMW", "Benz", "Audi"]);
 
-    function print() {
-      console.log(state.selectedCars);
-    }
-    return {
-      ...toRefs(state),
-      carList,
-      print,
-    };
-  },
-};
+function print() {
+  console.log(state.selectedCars);
+}
 </script>
 
-<style>
-</style>
+<style></style>

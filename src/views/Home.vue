@@ -14,8 +14,7 @@
     <router-link to="/api-populate">API Populate</router-link>
     <hr />
     <router-link to="/vuelidate">Vuelidate Validations</router-link>
-    <!-- <router-link to="/form-field">Vee Validate Form Field</router-link>
-    <router-link to="/vuex-todo">Vuex Todo</router-link> -->
+    <!-- <router-link to="/form-field">Vee Validate Form Field</router-link> -->
   </div>
 </template>
 

@@ -13,24 +13,15 @@
   </div>
 </template>
 
-<script>
-import { reactive, ref, toRefs } from "vue";
-export default {
-  setup() {
-    const selectedPlan = ref();
-    const planList = ref(["Free", "Team", "Enterprise"]);
+<script setup>
+import { ref } from "vue";
 
-    function print() {
-      console.log({ selectedPlan: selectedPlan.value });
-    }
-    return {
-      selectedPlan,
-      planList,
-      print,
-    };
-  },
-};
+const selectedPlan = ref();
+const planList = ref(["Free", "Team", "Enterprise"]);
+
+function print() {
+  console.log({ selectedPlan: selectedPlan.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>

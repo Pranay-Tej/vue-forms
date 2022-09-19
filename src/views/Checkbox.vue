@@ -13,29 +13,21 @@
       </template>
 
       <button type="submit">Print</button>
-      {{ selectedPlan }}
+      <p v-for="plan in selectedPlan">
+        {{ plan }}
+      </p>
     </form>
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from "vue";
-export default {
-  setup() {
-    const selectedPlan = ref([]);
-    const planList = ref(["Free", "Team", "Enterprise"]);
+const selectedPlan = ref([]);
+const planList = ref(["Free", "Team", "Enterprise"]);
 
-    function print() {
-      console.log({ selectedPlan: selectedPlan.value });
-    }
-    return {
-      selectedPlan,
-      planList,
-      print,
-    };
-  },
-};
+function print() {
+  console.log({ selectedPlan: selectedPlan.value });
+}
 </script>
 
-<style>
-</style>
+<style></style>
