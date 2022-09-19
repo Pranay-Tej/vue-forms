@@ -8,7 +8,6 @@ specifiers:
   '@vuelidate/validators': ^2.0.0-alpha.17
   axios: ^0.21.1
   date-fns: ^2.22.1
-  rxjs: ^7.1.0
   vee-validate: ^4.4.5
   vite: ^2.3.7
   vue: ^3.0.5
@@ -21,7 +20,6 @@ dependencies:
   '@vuelidate/validators': 2.0.0-alpha.31_vue@3.2.39
   axios: 0.21.4
   date-fns: 2.29.3
-  rxjs: 7.5.6
   vee-validate: 4.6.7_vue@3.2.39
   vue: 3.2.39
   vue-router: 4.1.5_vue@3.2.39
@@ -484,12 +482,6 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /rxjs/7.5.6:
-    resolution: {integrity: sha512-dnyv2/YsXhnm461G+R/Pe5bWP41Nm6LBXEYWI6eiFP4fiwx6WRI/CD0zbdVAudd9xwLEF2IDcKXLHit0FYjUzw==}
-    dependencies:
-      tslib: 2.4.0
-    dev: false
-
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
@@ -509,10 +501,6 @@ packages:
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
-
-  /tslib/2.4.0:
-    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
-    dev: false
 
   /vee-validate/4.6.7_vue@3.2.39:
     resolution: {integrity: sha512-8W9cR/EGqPuHJpodYriAlp5BndQf/IWFifZLyIWeNs7RGB+B0jr50TACjzgtwtp5qE6hgRskOToEhcfhWJdgyw==}

@@ -1,9 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import FormField from "../views/vee-validate/FormField.vue";
-import VuexTodo from "../views/vuex-todo/VuexTodo.vue";
-import VuexTodoList from "../views/vuex-todo/VuexTodoList.vue";
-import VuexTodoDetail from "../views/vuex-todo/VuexTodoDetail.vue";
 import TextInput from "../views/TextInput.vue";
 import NumberInput from "../views/NumberInput.vue";
 import Select from "../views/Select.vue";
@@ -116,20 +113,6 @@ const routes = [
       {
         path: "dynamic",
         component: DynamicValidation,
-      },
-    ],
-  },
-  {
-    path: "/vuex-todo",
-    component: VuexTodo,
-    children: [
-      {
-        path: "",
-        component: VuexTodoList,
-      },
-      {
-        path: ":id",
-        component: VuexTodoDetail,
       },
     ],
   },
